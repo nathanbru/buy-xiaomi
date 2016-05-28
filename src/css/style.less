@@ -10,3 +10,18 @@ h3 {
 	color: blue;
 	font-size: 12px;
 }
+
+.call-to-action {
+	.btn-primary {
+		background-color: orange;
+		transition: background-color 0.7s ease;
+
+		&:hover {
+			background-color: green;
+		}
+
+		&:focus, &active {
+			background-color: red;
+		}
+	}
+}

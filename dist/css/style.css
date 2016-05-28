@@ -8,3 +8,14 @@ h3 {
   color: blue;
   font-size: 12px;
 }
+.call-to-action .btn-primary {
+  background-color: orange;
+  transition: background-color 0.7s ease;
+}
+.call-to-action .btn-primary:hover {
+  background-color: green;
+}
+.call-to-action .btn-primary:focus,
+.call-to-action .btn-primaryactive {
+  background-color: red;
+}
