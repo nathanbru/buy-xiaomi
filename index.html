@@ -8,6 +8,8 @@
 		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
 		<link rel="stylesheet" href="dist/css/style.css">
 		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+		<script type="text/javascript" src="src/js/script.js"></script>
 	<body>
 		<div class="container">
 			<h1>About Us</h1>
@@ -38,6 +40,8 @@
 				experience. Xiaomi is headquartered in Beijing, China and has offices
 				in Asia-Pacific, India, and Brazil.
 			</p>
+
+			<button id="buy-now-btn" class="btn btn-lg btn-primary">Click Here to buy</button>
 
 			<h2 id="second-title">About Us</h2>
 			<p>
@@ -92,6 +96,26 @@
 					<li>Xiaomi Mi4</li>
 					<li>Xiaomi RedMe 4</li>
 				</ul>
+			</div>
+		</div>
+
+		<div class="modal fade" id="buy-now-modal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">Buy Now</h4>
+					</div>
+					<div class="modal-body">
+						<form>
+							<input class="form-control" type="text" placeholder="Email">
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Send Message</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	</body>
