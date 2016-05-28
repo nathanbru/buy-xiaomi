@@ -28,9 +28,20 @@ module.exports = function(grunt) {
         }
       }
     },
+    cssmin: {
+      options: {
+        shorthandCompacting: false,
+        roundingPrecision: -1
+      },
+      target: {
+        files: {
+          'dist/css/style.min.css': ['dist/css/style.css']
+        }
+      }
+    },   
     watch: {
       files: ['src/**/*'],
-      tasks: ['jshint', 'less', 'uglify']
+      tasks: ['jshint', 'less', 'cssmin','uglify']
     }
   });
 
@@ -38,5 +49,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.registerTask('default', ['jshint']);
 };
