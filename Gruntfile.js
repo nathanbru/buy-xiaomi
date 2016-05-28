@@ -18,14 +18,25 @@ module.exports = function(grunt) {
         }
       }
     },
+    uglify: {
+      options: {
+        mangle: true
+      },
+      my_target: {
+        files: {
+          'dist/js/script.min.js': ['src/js/script.js']
+        }
+      }
+    },
     watch: {
       files: ['src/**/*'],
-      tasks: ['jshint', 'less']
+      tasks: ['jshint', 'less', 'uglify']
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.registerTask('default', ['jshint']);
 };
